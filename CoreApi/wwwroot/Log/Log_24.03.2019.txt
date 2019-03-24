@@ -1,0 +1,184 @@
+Time [24.03.2019 11:55:58]
+Path [/api/values]
+Method [GET]
+Response Body [Started]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:58:28]
+Path [/api/values]
+Method [GET]
+Response Body [Started]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:58:58]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"bkepti","Password":"6703175Bk!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJia2VwdGkiLCJqdGkiOiJhYTUyYjE1Ni0yM2NiLTQwZGUtODI2NS0zMzk2NDY1MmM0MWMiLCJleHAiOjE1NTM1NDg3MzgsImlzcyI6ImZyaXNzLmNvbSIsImF1ZCI6ImZyaXNzLmNvbSJ9.QdcjgN-AdKKfI1Z73MGLMdkcp7w6YDOtOT-QWNrHt5g","expiration":"2019-03-25T21:18:58Z","userRoleName":"Admin","fullName":"Burak Kepti","userRoleId":1}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:58:59]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"bkepti","Password":"6703175Bk!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJia2VwdGkiLCJqdGkiOiJjMjU5NmMzZi1mZmEwLTQyMjgtYmY4Yi04YmIzYjM4OWFiODMiLCJleHAiOjE1NTM1NDg3MzgsImlzcyI6ImZyaXNzLmNvbSIsImF1ZCI6ImZyaXNzLmNvbSJ9.cVlHIkEVAIW59GtTkwdGWS6IooiXbSBctDdu0EEkDZg","expiration":"2019-03-25T21:18:58Z","userRoleName":"Admin","fullName":"Burak Kepti","userRoleId":1}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:58:59]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:58:59]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":null,"resultMessage":"Error","resultInnerMessage":"System.InvalidOperationException: A second operation started on this context before a previous operation completed. Any instance members are not guaranteed to be thread safe.\r\n   at Microsoft.EntityFrameworkCore.Internal.ConcurrencyDetector.EnterCriticalSection()\r\n   at Microsoft.EntityFrameworkCore.Query.Internal.LinqOperatorProvider.ExceptionInterceptor`1.EnumeratorExceptionInterceptor.MoveNext()\r\n   at DataLayer.SqlRepository`1.GetList(Expression`1 query) in D:\\Friss\\DataLayer\\SqlRepository.cs:line 84\r\n   at BusinessLayer.DocumentBusiness.GetAll() in D:\\Friss\\BusinessLayer\\DocumentBusiness .cs:line 105","resultStatus":false,"resultCode":999}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:03]
+Path [/api/documenttype/maxfilesize]
+Method [GET]
+Response Body [2]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:03]
+Path [/api/documenttype/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"typeName":"PDF","extentions":".pdf"},{"id":2,"typeName":"WORD","extentions":".doc;.docx"},{"id":3,"typeName":"EXCEL","extentions":".xls;.xlsx"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:28]
+Path [/api/documenttype/maxfilesize]
+Method [GET]
+Response Body [2]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:28]
+Path [/api/documenttype/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"typeName":"PDF","extentions":".pdf"},{"id":2,"typeName":"WORD","extentions":".doc;.docx"},{"id":3,"typeName":"EXCEL","extentions":".xls;.xlsx"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:46]
+Path [/api/document/v1]
+Method [POST]
+Request Body [(Truncated to 1000 chars) {requestBody.Substring(0, CharLimit)}]
+Response Body [{"resultEntity":{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711Z","createdUserId":1,"lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"},"resultMessage":"Saved","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:46]
+Path [/api/documenttype/maxfilesize]
+Method [GET]
+Response Body [2]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:46]
+Path [/api/documenttype/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"typeName":"PDF","extentions":".pdf"},{"id":2,"typeName":"WORD","extentions":".doc;.docx"},{"id":3,"typeName":"EXCEL","extentions":".xls;.xlsx"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 11:59:48]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:31]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"bkepti","Password":"6703175Bk!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJia2VwdGkiLCJqdGkiOiJmMTdjNGYyNy1lOWMzLTRlZDAtOGVlZC04N2U3MTQ4MzlhYzAiLCJleHAiOjE1NTM1NDg4MzEsImlzcyI6ImZyaXNzLmNvbSIsImF1ZCI6ImZyaXNzLmNvbSJ9.bx8BGUCAH4hDyG7mFFgp-XqgVId9tCZ-zuMbYRkyUH4","expiration":"2019-03-25T21:20:31Z","userRoleName":"Admin","fullName":"Burak Kepti","userRoleId":1}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:31]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:32]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"guest","Password":"123456!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJndWVzdCIsImp0aSI6ImZhMmYxMjQ5LTIxOWMtNDVkYy05Y2IxLTY0MmQzYmY1MmIzNCIsImV4cCI6MTU1MzU0ODgzMiwiaXNzIjoiZnJpc3MuY29tIiwiYXVkIjoiZnJpc3MuY29tIn0.8gPSgGffZWiI92e04rmgXr6Ng8EyygRtf0YrqLIQEAk","expiration":"2019-03-25T21:20:32Z","userRoleName":"Operator","fullName":"Guest Guest","userRoleId":2}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:32]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:35]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"nomember","Password":"tyututu"}]
+Response Body []
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:58]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"bkepti","Password":"6703175Bk!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJia2VwdGkiLCJqdGkiOiJmOWE3ZWIzMC1mZTA2LTQ2M2UtOTg0OC0wMjNhYmIxNjFhZGQiLCJleHAiOjE1NTM1NDg4NTgsImlzcyI6ImZyaXNzLmNvbSIsImF1ZCI6ImZyaXNzLmNvbSJ9.5bRM1IcNEVUEUquGZGuvjBbrhliavNFxpaifruJLYpA","expiration":"2019-03-25T21:20:58Z","userRoleName":"Admin","fullName":"Burak Kepti","userRoleId":1}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:00:58]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:00]
+Path [/api/documenttype/maxfilesize]
+Method [GET]
+Response Body [2]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:00]
+Path [/api/documenttype/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"typeName":"PDF","extentions":".pdf"},{"id":2,"typeName":"WORD","extentions":".doc;.docx"},{"id":3,"typeName":"EXCEL","extentions":".xls;.xlsx"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:03]
+Path [/api/document/v1]
+Method [POST]
+Request Body [(Truncated to 1000 chars) {requestBody.Substring(0, CharLimit)}]
+Response Body [{"resultEntity":{"id":2,"name":"0380c9095ea24986a230bbcb67305fac","filePath":"http://localhost:52490/LocalStorage/cb860de51bf740ea8ce95c02803753b9.docx","createdDate":"2019-03-24T12:01:03.1134488Z","createdUserId":1,"lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"},"resultMessage":"Saved","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:03]
+Path [/api/documenttype/maxfilesize]
+Method [GET]
+Response Body [2]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:03]
+Path [/api/documenttype/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"typeName":"PDF","extentions":".pdf"},{"id":2,"typeName":"WORD","extentions":".doc;.docx"},{"id":3,"typeName":"EXCEL","extentions":".xls;.xlsx"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:05]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"guest","Password":"123456!"}]
+Response Body [{"token":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJndWVzdCIsImp0aSI6ImJiYjMwODZlLWUwNTItNDBkNC1iZTA0LTM1NDgyOTA1MzY3NyIsImV4cCI6MTU1MzU0ODg2NSwiaXNzIjoiZnJpc3MuY29tIiwiYXVkIjoiZnJpc3MuY29tIn0.iYsm2ATmWyw9aT41HH6zHok3N4inNMt3bzaimOCcc1g","expiration":"2019-03-25T21:21:05Z","userRoleName":"Operator","fullName":"Guest Guest","userRoleId":2}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:05]
+Path [/api/document/v1]
+Method [GET]
+Response Body [{"resultEntity":[{"id":1,"name":"My First File","filePath":"http://localhost:52490/LocalStorage/d57ca1054b8d45f5916880cab6db59fe.docx","createdDate":"2019-03-24T11:59:46.6773711","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"},{"id":2,"name":"0380c9095ea24986a230bbcb67305fac","filePath":"http://localhost:52490/LocalStorage/cb860de51bf740ea8ce95c02803753b9.docx","createdDate":"2019-03-24T12:01:03.1134488","fullname":"Burak Kepti","lastDownloadDate":"0001-01-01T00:00:00","fileSize":"12692"}],"resultMessage":"Listed","resultInnerMessage":null,"resultStatus":true,"resultCode":200}]
+
+---------------------------------------------------------------
+Time [24.03.2019 12:01:08]
+Path [/api/auth/v1/login]
+Method [POST]
+Request Body [{"UserName":"nomember","Password":"tyututu"}]
+Response Body []
+
+---------------------------------------------------------------

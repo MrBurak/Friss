@@ -1,0 +1,50 @@
+﻿@using CoreSite.Models.RestApiModels
+@model List<DocumentItem>
+@{ 
+    TokenModel session = (TokenModel)ViewData["Session"];
+}
+<div class="row">
+    <h4 style="float:left">Welocome @session.FullName</h4>
+    @if (session.UserRoleId == 1)
+    {
+    <a href="/Home/Upload" class="btn btn-danger" style="float:right" id="btnUpload" >Upload</a>}
+</div>
+
+    
+    <div class="row">
+        <table class="table table-dark">
+            <thead>
+                <tr>
+                    <th scope="col">File Name</th>
+                    <th scope="col">Uploaded Person</th>
+                    <th scope="col">Upload Date</th>
+                    <th scope="col">File Size</th>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (DocumentItem item in Model)
+                {
+                    <tr>
+                        <td>@item.Name</td>
+                        <td>@item.Fullname</td>
+                        <td>@string.Format("{0:dd/MM/yyy HH:mm}", item.CreatedDate)</td>
+                        <td>@item.FileSize  byte</td>
+                        <td><input type="button" class="btn btn-success" value="Download" data-id="@item.Id" /></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+    <script>
+        $(".btn-success").on("click", function () {
+            var id = $(this).attr("data-id");
+            $.get("/Home/Download?id=" + id, function (data) {
+                if (data.resultStatus === true) {
+                    window.open(data.resultEntity, '_blank');
+                    window.location.href = "/Home/Index";
+                }
+            });
+        });
+    </script>

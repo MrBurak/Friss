@@ -1,0 +1,70 @@
+﻿@using CoreSite.Models.RestApiModels
+@model List<string>
+@{
+    TokenModel session = (TokenModel)ViewData["Session"];
+    int maxFileSize = (int)ViewData["FileSize"];
+}
+
+<div class="row">
+
+    <h4 style="float:left">Welocome @session.FullName</h4>
+    <a href="/Home/Index" class="btn btn-danger" style="float:right">Back</a>
+</div>
+<hr />
+@if (ViewData["Saved"] != null)
+{
+    var saved = (bool)ViewData["Saved"];
+<div>
+    @if (saved)
+    {
+        <input readonly class="input-lg col-lg-12" style="color:#fff; background-color:forestgreen" value="@ViewData["Result"]" id="lbSuccess" />
+    }
+    else
+    {
+        <input readonly class="input-lg col-lg-12" style="color:#fff; background-color:red" value="@ViewData["Result"]" id="lbFail"  />
+    }
+</div>
+
+}
+
+<div class="row">
+    <form method="post" enctype="multipart/form-data" action="/Home/Upload">
+        <div class="col-lg-5">
+            <input type="file" name="file" id="file" class="input-lg" placeholder="Choose File" style="float:left" />
+        </div>
+        <div class="col-lg-5">
+            <input type="text" name="filename" id="filename" class="input-lg" placeholder="File Name" style="float:left" autocomplete="off" maxlength="64" />
+        </div>
+        <div class="col-lg-2">
+            <input class="btn btn-success" type="submit" style="float:left; display:none" value="Upload" id="btnSaveFile">
+        </div>
+        
+    </form>
+</div>
+<div class="row" style="text-align:center;padding-top:20px"><b style="color:red">* Valid Extensions : @string.Join(" ", Model)</b></div>
+<div class="row">
+    <input readonly class="input-lg col-lg-12" style="color:#fff; background-color:red; display:none" value="" id="lblerror" />
+</div>
+<script>
+    $('#file').bind('change', function ()
+    {
+        var filesize = this.files[0].size / 1024 / 1024
+        if (filesize <= @maxFileSize)
+        {
+            $(".btn-success").show();
+            $("#lblerror").hide();
+        }
+        else
+        {
+            $(".btn-success").hide();
+            $(this).val("");
+            $("#lblerror").show();
+            $("#lblerror").val("File size have to be smaller than " + "@maxFileSize" + "Mb");
+        }
+    });
+</script>
+
+
+
+
+
